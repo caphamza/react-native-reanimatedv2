@@ -1,19 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import {Canvas, Circle} from "@shopify/react-native-skia";
+
 
 export default function App() {
+  const r = 128;
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <Canvas style={styles.container}>
+        <Circle cx={160} cy={200} r={r} color="lightblue" />
+      </Canvas>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
